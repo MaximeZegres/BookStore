@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="10.1.1" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.0" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="9.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BookStore.Domain\BookStore.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Features\Books\Commands\CreateBook\" />
+    <Folder Include="Features\Customers\Commands\" />
+    <Folder Include="Features\Customers\Queries\" />
+    <Folder Include="Features\Orders\Commands\" />
+    <Folder Include="Features\Orders\Queries\" />
+  </ItemGroup>
+
+</Project>

@@ -15,9 +15,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastru
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{D55ED5A2-DA67-4362-A0F3-3C71D96F53E6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookStore.Domain", "BookStore.Domain\BookStore.Domain.csproj", "{4EE8AD75-3163-414F-A0D0-86DB5D0521AC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookStore.Domain", "BookStore.Domain\BookStore.Domain.csproj", "{4EE8AD75-3163-414F-A0D0-86DB5D0521AC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookStore.Application", "BookStore.Application\BookStore.Application.csproj", "{BA21F7A9-08CE-49CC-8828-E22441DCB162}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookStore.Application", "BookStore.Application\BookStore.Application.csproj", "{BA21F7A9-08CE-49CC-8828-E22441DCB162}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookStore.Persistence", "BookStore.Persistence\BookStore.Persistence.csproj", "{92ABB943-C790-41AE-BF8A-E8A7661674C0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{BA21F7A9-08CE-49CC-8828-E22441DCB162}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BA21F7A9-08CE-49CC-8828-E22441DCB162}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BA21F7A9-08CE-49CC-8828-E22441DCB162}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92ABB943-C790-41AE-BF8A-E8A7661674C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92ABB943-C790-41AE-BF8A-E8A7661674C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92ABB943-C790-41AE-BF8A-E8A7661674C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92ABB943-C790-41AE-BF8A-E8A7661674C0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -44,6 +50,7 @@ Global
 		{D55ED5A2-DA67-4362-A0F3-3C71D96F53E6} = {17ED5746-437A-40CA-97B1-77B497E4A9F8}
 		{4EE8AD75-3163-414F-A0D0-86DB5D0521AC} = {C1DCFC1D-7712-45F1-8269-10BB000CF544}
 		{BA21F7A9-08CE-49CC-8828-E22441DCB162} = {C1DCFC1D-7712-45F1-8269-10BB000CF544}
+		{92ABB943-C790-41AE-BF8A-E8A7661674C0} = {6C26162D-89B2-460C-8A55-5242E982FBD6}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {97785CC6-4C0A-4273-B657-2B3DDD017520}

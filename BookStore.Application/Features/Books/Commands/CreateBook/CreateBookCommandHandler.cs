@@ -23,7 +23,15 @@ namespace BookStore.Application.Features.Books.Commands.CreateBook
 
         public async Task<Guid> Handle(CreateBookCommand request, CancellationToken cancellationToken)
         {
-            var book = _mapper.Map<Book>(request);
+            var validator = new CreateBookCommandValidator();
+            var validationResult = await validator.ValidateAsync(request);
+
+            if(validationResult.Errors.Count > 0)
+            {
+                throw new Exceptions.ValidationException(validationResult);
+            }
+
+            var book = _mapper.Map<Book>(request);          
 
             book = await _bookRepository.AddAsync(book);
 

@@ -1,11 +1,11 @@
-﻿using BookStore.Domain.Common;
+﻿using MediatR;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace BookStore.Domain.Entities
+namespace BookStore.Application.Features.Books.Commands.UpdateBook
 {
-    public class Book : AuditableEntity
+    public class UpdateBookCommand : IRequest
     {
         public Guid BookId { get; set; }
 
@@ -16,5 +16,7 @@ namespace BookStore.Domain.Entities
         public string Editor { get; set; }
 
         public string ISBN { get; set; }
+
+        public int Price { get; set; }
     }
 }

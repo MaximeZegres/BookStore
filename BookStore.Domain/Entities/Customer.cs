@@ -7,7 +7,7 @@ namespace BookStore.Domain.Entities
 {
     public class Customer : AuditableEntity
     {
-        public int CustomerId { get; private set; }
+        public Guid CustomerId { get; private set; }
 
         public string FirstName { get; set; }
 

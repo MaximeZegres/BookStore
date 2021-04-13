@@ -7,12 +7,21 @@ namespace BookStore.Domain.Entities
 {
     public class Order : AuditableEntity
     {
-        public int CustomerId { get; set; }
+        public Guid CustomerId { get; set; }
 
         public DateTimeOffset? OrderDate { get; set; }
 
         public int OrderId { get; set; }
 
+        public int OrderTotal { get; set; }
+
         public List<Book> Books { get; set; }
+
+        public bool OrderPaid { get; set; }
+
+        public bool OrderShipped { get; set; }
+
+        public bool OrderContacted { get; set; }
+
     }
 }

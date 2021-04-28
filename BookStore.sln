@@ -19,7 +19,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookStore.Domain", "BookSto
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookStore.Application", "BookStore.Application\BookStore.Application.csproj", "{BA21F7A9-08CE-49CC-8828-E22441DCB162}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookStore.Persistence", "BookStore.Persistence\BookStore.Persistence.csproj", "{92ABB943-C790-41AE-BF8A-E8A7661674C0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookStore.Persistence", "BookStore.Persistence\BookStore.Persistence.csproj", "{92ABB943-C790-41AE-BF8A-E8A7661674C0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookStore.Infrastructure", "BookStore.Infrastructure\BookStore.Infrastructure.csproj", "{E13F296C-FC6B-428B-B6C3-C1DC3D9F35EE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{92ABB943-C790-41AE-BF8A-E8A7661674C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{92ABB943-C790-41AE-BF8A-E8A7661674C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{92ABB943-C790-41AE-BF8A-E8A7661674C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E13F296C-FC6B-428B-B6C3-C1DC3D9F35EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E13F296C-FC6B-428B-B6C3-C1DC3D9F35EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E13F296C-FC6B-428B-B6C3-C1DC3D9F35EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E13F296C-FC6B-428B-B6C3-C1DC3D9F35EE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -51,6 +57,7 @@ Global
 		{4EE8AD75-3163-414F-A0D0-86DB5D0521AC} = {C1DCFC1D-7712-45F1-8269-10BB000CF544}
 		{BA21F7A9-08CE-49CC-8828-E22441DCB162} = {C1DCFC1D-7712-45F1-8269-10BB000CF544}
 		{92ABB943-C790-41AE-BF8A-E8A7661674C0} = {6C26162D-89B2-460C-8A55-5242E982FBD6}
+		{E13F296C-FC6B-428B-B6C3-C1DC3D9F35EE} = {6C26162D-89B2-460C-8A55-5242E982FBD6}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {97785CC6-4C0A-4273-B657-2B3DDD017520}

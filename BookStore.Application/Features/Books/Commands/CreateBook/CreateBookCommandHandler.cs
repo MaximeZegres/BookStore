@@ -12,10 +12,10 @@ namespace BookStore.Application.Features.Books.Commands.CreateBook
 {
     public class CreateBookCommandHandler : IRequestHandler<CreateBookCommand, Guid>
     {
-        private readonly IBookRepository _bookRepository;
+        private readonly IAsyncRepository<Book> _bookRepository;
         private readonly IMapper _mapper;
 
-        public CreateBookCommandHandler(IMapper mapper, IBookRepository bookRepository)
+        public CreateBookCommandHandler(IMapper mapper, IAsyncRepository<Book> bookRepository)
         {
             _mapper = mapper;
             _bookRepository = bookRepository;

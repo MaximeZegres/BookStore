@@ -1,11 +1,11 @@
-﻿using BookStore.Domain.Common;
+﻿using MediatR;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace BookStore.Domain.Entities
+namespace BookStore.Application.Features.Customers.Commands
 {
-    public class Customer : AuditableEntity
+    public class UpdateCustomerCommand : IRequest
     {
         public Guid CustomerId { get; set; }
 

@@ -19,7 +19,7 @@ namespace BookStore.Application.Features.Books.Commands.CreateBook
 
         public override string ToString()
         {
-            return $"Book name: {Title}; Author: {Author}, Editor:{Editor}, ISBN: {ISBN}, Price:{Price}";
+            return $"Book name: {Title}; Author: {Author}; Editor:{Editor}; ISBN: {ISBN}; Price:{Price}";
         }
     }
 }

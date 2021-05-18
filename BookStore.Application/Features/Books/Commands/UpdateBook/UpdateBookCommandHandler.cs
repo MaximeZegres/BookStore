@@ -27,7 +27,7 @@ namespace BookStore.Application.Features.Books.Commands.UpdateBook
 
             _mapper.Map(request, bookToUpdate, typeof(UpdateBookCommand), typeof(Book));
 
-            await _bookRepository.DeleteAsync(bookToUpdate);
+            await _bookRepository.UpdateAsync(bookToUpdate);
 
             return Unit.Value;
         }

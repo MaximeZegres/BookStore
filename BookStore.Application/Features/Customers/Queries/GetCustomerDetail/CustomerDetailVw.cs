@@ -1,11 +1,10 @@
-﻿using BookStore.Domain.Common;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace BookStore.Domain.Entities
+namespace BookStore.Application.Features.Customers.Queries.GetCustomerDetail
 {
-    public class Customer : AuditableEntity
+    public class CustomerDetailVw
     {
         public Guid CustomerId { get; set; }
 

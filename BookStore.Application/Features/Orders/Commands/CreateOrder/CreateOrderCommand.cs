@@ -1,21 +1,22 @@
-﻿using BookStore.Domain.Common;
+﻿using BookStore.Domain.Entities;
+using MediatR;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace BookStore.Domain.Entities
+namespace BookStore.Application.Features.Orders.Commands
 {
-    public class Order : AuditableEntity
+    public class CreateOrderCommand : IRequest<int>
     {
         public Guid CustomerId { get; set; }
 
-        public DateTime OrderDate { get; set; }
+        public DateTimeOffset? OrderDate { get; set; }
 
         public int OrderId { get; set; }
 
         public int OrderTotal { get; set; }
 
-        public List<OrderItem> OrderItems { get; set; }
+        public List<Book> Books { get; set; }
 
         public bool OrderPaid { get; set; }
 

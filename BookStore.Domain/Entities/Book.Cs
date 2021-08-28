@@ -1,6 +1,7 @@
 ﻿using BookStore.Domain.Common;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
 namespace BookStore.Domain.Entities
@@ -16,5 +17,8 @@ namespace BookStore.Domain.Entities
         public string Editor { get; set; }
 
         public string ISBN { get; set; }
+
+        [Column(TypeName = "decimal(18,4)")]
+        public decimal Price { get; set; }
     }
 }

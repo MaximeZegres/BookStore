@@ -1,6 +1,7 @@
 ﻿using BookStore.Domain.Common;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
 namespace BookStore.Domain.Entities
@@ -13,7 +14,8 @@ namespace BookStore.Domain.Entities
 
         public int OrderId { get; set; }
 
-        public int OrderTotal { get; set; }
+        [Column(TypeName = "decimal(18,4)")]
+        public decimal OrderTotal { get; set; }
 
         public List<OrderItem> OrderItems { get; set; }
 

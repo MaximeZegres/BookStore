@@ -9,7 +9,7 @@ namespace BookStore.Persistence.Repositories
 {
     public class BaseRepository<T> : IAsyncRepository<T> where T : class
     {
-        private readonly BookStoreDbContext _dbContext;
+        protected readonly BookStoreDbContext _dbContext;
 
         public BaseRepository(BookStoreDbContext dbContext)
         {

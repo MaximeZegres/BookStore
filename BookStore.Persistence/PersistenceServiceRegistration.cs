@@ -17,6 +17,7 @@ namespace BookStore.Persistence
                 options.UseSqlServer(configuration.GetConnectionString("BookStoreConnectionString")));
 
             services.AddScoped(typeof(IAsyncRepository<>), typeof(BaseRepository<>));
+            services.AddScoped<IOrderRepository, OrderRepository>();
 
             return services;
         }

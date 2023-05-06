@@ -21,13 +21,13 @@ namespace BookStore.Application.Features.Books.Commands.DeleteBook
             _bookRepository = bookRepository;
         }
 
-        public async Task<Unit> Handle(DeleteBookCommand request, CancellationToken cancellationToken)
+        public async Task Handle(DeleteBookCommand request, CancellationToken cancellationToken)
         {
             var bookToDelete = await _bookRepository.GetByIdAsync(request.BookId);
 
             await _bookRepository.DeleteAsync(bookToDelete);
 
-            return Unit.Value;
+            return;
         }
     }
 }

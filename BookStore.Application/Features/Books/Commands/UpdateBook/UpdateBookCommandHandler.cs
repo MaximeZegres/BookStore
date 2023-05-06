@@ -21,7 +21,7 @@ namespace BookStore.Application.Features.Books.Commands.UpdateBook
             _bookRepository = bookRepository;
         }
 
-        public async Task<Unit> Handle(UpdateBookCommand request, CancellationToken cancellationToken)
+        public async Task Handle(UpdateBookCommand request, CancellationToken cancellationToken)
         {
             var bookToUpdate = await _bookRepository.GetByIdAsync(request.BookId);
 
@@ -29,7 +29,7 @@ namespace BookStore.Application.Features.Books.Commands.UpdateBook
 
             await _bookRepository.UpdateAsync(bookToUpdate);
 
-            return Unit.Value;
+            return;
         }
     }
 }

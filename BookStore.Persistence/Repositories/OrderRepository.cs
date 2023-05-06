@@ -1,9 +1,6 @@
 ﻿using BookStore.Application.Contracts.Persistence;
 using BookStore.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace BookStore.Persistence.Repositories
@@ -18,7 +15,5 @@ namespace BookStore.Persistence.Repositories
         {
             return await _dbContext.Orders.Include(o => o.OrderItems).FirstOrDefaultAsync(i => i.OrderId == id);
         }
-
-        // Add the add async with orders and orderItems
     }
 }

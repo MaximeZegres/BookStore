@@ -21,7 +21,7 @@ namespace BookStore.Application.Features.Customers.Commands.UpdateCustomer
             _customerRepository = customerRepository;
         }
 
-        public async Task<Unit> Handle(UpdateCustomerCommand request, CancellationToken cancellationToken)
+        public async Task Handle(UpdateCustomerCommand request, CancellationToken cancellationToken)
         {
             var customerToUpdate = await _customerRepository.GetByIdAsync(request.CustomerId);
 
@@ -29,7 +29,7 @@ namespace BookStore.Application.Features.Customers.Commands.UpdateCustomer
 
             await _customerRepository.UpdateAsync(customerToUpdate);
 
-            return Unit.Value;
+            return;
         }
 
     }

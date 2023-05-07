@@ -6,7 +6,7 @@ namespace BookStore.Application.Features.Books
 {
     public class BookListVm
     {
-        public int BookId { get; set; }
+        public Guid BookId { get; set; }
 
         public string Title { get; set; }
 
@@ -15,5 +15,7 @@ namespace BookStore.Application.Features.Books
         public string Editor { get; set; }
 
         public string ISBN { get; set; }
+
+        public decimal Price { get; set; }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using BookStore.Domain.Common;
 using BookStore.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using System;
 using System.Threading;
 using System.Threading.Tasks;
@@ -9,9 +10,18 @@ namespace BookStore.Persistence
 {
     public class BookStoreDbContext : DbContext
     {
-        public BookStoreDbContext(DbContextOptions<BookStoreDbContext> options)
+        protected readonly IConfiguration Configuration;
+
+        public BookStoreDbContext(DbContextOptions<BookStoreDbContext> options, IConfiguration configuration)
             : base(options)
         {
+            Configuration = configuration;
+        }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder options)
+        {
+            // connect to postgres with connection string from app settings
+            options.UseNpgsql(Configuration.GetConnectionString("BookStoreConnectionString"));
         }
 
         public DbSet<Book> Books { get; set; }

@@ -3,6 +3,7 @@ using BookStore.Application.Features.Books;
 using BookStore.Application.Features.Books.Commands.CreateBook;
 using BookStore.Application.Features.Books.Commands.DeleteBook;
 using BookStore.Application.Features.Books.Commands.UpdateBook;
+using BookStore.Application.Features.Books.GetBookDetail;
 using BookStore.Domain.Entities;
 using System;
 using System.Collections.Generic;
@@ -15,6 +16,7 @@ namespace BookStore.Application.Profiles
         public MappingProfile()
         {
             CreateMap<Book, BookListVm>().ReverseMap();
+            CreateMap<Book, BookDetailVm>().ReverseMap();
             CreateMap<Book, CreateBookCommand>().ReverseMap();
             CreateMap<Book, UpdateBookCommand>().ReverseMap();
             CreateMap<Book, DeleteBookCommand>().ReverseMap();

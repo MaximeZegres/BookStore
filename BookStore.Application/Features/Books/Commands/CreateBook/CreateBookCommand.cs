@@ -15,7 +15,7 @@ namespace BookStore.Application.Features.Books.Commands.CreateBook
 
         public string ISBN { get; set; }
 
-        public int Price { get; set; }
+        public decimal Price { get; set; }
 
         public override string ToString()
         {

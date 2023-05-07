@@ -6,7 +6,7 @@ namespace BookStore.Application.Features.Books.GetBookDetail
 {
     public class BookDetailVm
     {
-        public int BookId { get; set; }
+        public Guid BookId { get; set; }
 
         public string Title { get; set; }
 
